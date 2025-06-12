@@ -1,3 +1,6 @@
 [submodule "taskmaster"]
 	path = taskmaster
 	url = https://github.com/takea-look/takealook-taskmaster
+[submodule "takealook-taskmaster"]
+	path = takealook-taskmaster
+	url = https://github.com/takea-look/takealook-taskmaster.git
