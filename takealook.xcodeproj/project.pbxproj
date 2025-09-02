@@ -33,9 +33,22 @@
 		CE59A5A32DFB1D2900C2B727 /* takealookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = takealookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CE1265072E673EBA005113CD /* Exceptions for "takealook" folder in "takealook" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CE59A58B2DFB1D2800C2B727 /* takealook */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CE59A58E2DFB1D2800C2B727 /* takealook */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CE1265072E673EBA005113CD /* Exceptions for "takealook" folder in "takealook" target */,
+			);
 			path = takealook;
 			sourceTree = "<group>";
 		};
