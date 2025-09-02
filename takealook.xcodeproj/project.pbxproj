@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE12650B2E673F6E005113CD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE12650A2E673F6E005113CD /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CE59A59A2DFB1D2900C2B727 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE12650B2E673F6E005113CD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1265092E673F6E005113CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE59A5832DFB1D2800C2B727 = {
 			isa = PBXGroup;
 			children = (
 				CE59A58E2DFB1D2800C2B727 /* takealook */,
 				CE59A59C2DFB1D2900C2B727 /* takealookTests */,
 				CE59A5A62DFB1D2900C2B727 /* takealookUITests */,
+				CE1265092E673F6E005113CD /* Frameworks */,
 				CE59A58D2DFB1D2800C2B727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +125,7 @@
 			);
 			name = takealook;
 			packageProductDependencies = (
+				CE12650A2E673F6E005113CD /* Alamofire */,
 			);
 			productName = takealook;
 			productReference = CE59A58C2DFB1D2800C2B727 /* takealook.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = CE59A5832DFB1D2800C2B727;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CE1265062E673D76005113CD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CE59A58D2DFB1D2800C2B727 /* Products */;
 			projectDirPath = "";
@@ -410,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.easternkite.takealook;
+				PRODUCT_BUNDLE_IDENTIFIER = my.takealook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -438,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.easternkite.takealook;
+				PRODUCT_BUNDLE_IDENTIFIER = my.takealook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -558,6 +575,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE1265062E673D76005113CD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE12650A2E673F6E005113CD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1265062E673D76005113CD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE59A5842DFB1D2800C2B727 /* Project object */;
 }
