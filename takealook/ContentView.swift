@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var stickers: [StickerResult] = []
+    @State private var stickers: [StickerCategoryResult] = []
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct ContentView: View {
         .background(.tklBackground)
         .task {
             do {
-                stickers = try await TklAfApi().getStickers()
+                stickers = try await TklAfApi().getStickerCategories()
             } catch {
                 print("\(error)")
             }
