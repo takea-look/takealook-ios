@@ -1,6 +1,6 @@
 protocol TklApi {
     
-    func getStickers() async throws -> [StickerResult]
+    func getStickers(categoryId: Int?) async throws -> [StickerResult]
     
     func getStickerCategories() async throws -> [StickerCategoryResult]
 }

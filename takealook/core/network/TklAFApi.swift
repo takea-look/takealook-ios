@@ -2,9 +2,15 @@ import Alamofire
 import Foundation
 
 class TklAfApi: TklApi {
-    func getStickers() async throws -> [StickerResult] {
+    func getStickers(categoryId: Int? = nil) async throws -> [StickerResult] {
+        let params = ["categoryId": categoryId ?? 0]
+        
         return try await AF
-            .requestWith("stickers")
+            .request(
+                baseUrlWith("stickers"),
+                method: .get,
+                parameters: params,
+            )
             .serializingDecodable([StickerResult].self)
             .value
     }
@@ -17,7 +23,12 @@ class TklAfApi: TklApi {
     }
 }
 
+func baseUrlWith(_ path: String) -> String {
+    return "\(Environment.baseUrl)\(path)"
+}
+
 extension Session {
+    
     /**
      base url 을 간편하게 적용하기 위한 extension
      
