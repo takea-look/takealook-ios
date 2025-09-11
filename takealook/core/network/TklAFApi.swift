@@ -15,6 +15,28 @@ class TklAfApi: TklApi {
             .serializingDecodable([StickerCategoryResult].self)
             .value
     }
+    
+    func signIn(loginBody: LoginBody) async throws -> LoginResponse {
+        return try await AF
+            .request(
+                baseUrlWith("auth/signin"),
+                method: .post,
+                parameters: loginBody,
+                encoder: JSONParameterEncoder.default
+            ).serializingDecodable(LoginResponse.self)
+            .value
+    }
+    
+    func signUp(loginBody: LoginBody) async throws -> Void {
+        AF.request(
+            baseUrlWith("auth/signup"),
+            method: .post,
+            parameters: loginBody,
+            encoder: JSONParameterEncoder.default
+        ).response { response in
+            print(response)
+        }
+    }
 }
 
 extension Session {
